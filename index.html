@@ -1,0 +1,484 @@
+<html>
+<head>
+<nav id="navbar">
+  <h1>Group-10 WT Project : Inheritance</h1>
+  <link rel="stylesheet" href="style.css">
+  <a href="#Introduction" class="nav-link">Introduction</a>
+  <a href="#Basics_of_Inheritance" class="nav-link">Basics of Inheritance</a>
+  <a href="#Types_of_Inheritance" class="nav-link">Types of Inheritance</a>
+  <a href="#Method_OverRiding" class="nav-link">Method OverRiding</a>
+  <a href="#Dynamic_Method_Dispatch" class="nav-link">Dynamic Method Dispatch</a>
+</nav>
+</head>
+<body>
+  <h2>Group 10 Members</h2>
+  <div class="slider-box">
+    <div id="slider">
+      <img src="Jyotiraditya Saha (2).jpg">
+      <div class="text-block">
+        <h4><a href="https://www.linkedin.com/in/jyotiradityasaha/">Jyotiraditya Saha,20051209</a></h4>
+      </div>
+    </div>
+  </div>
+  <div class="slider-box">
+      <div id="slider">
+        <img src="SupratikDutta1.jpeg">
+        <div class="text-block1">
+          <h4><a href="https://www.linkedin.com/in/supratik-dutta-2362811b7/">Supratik Dutta,20051227</a></h4>
+        </div>
+      </div>
+  </div>
+  <div class="slider-box">
+      <div id="slider">
+        <img src="swagnik4.jpeg">
+        <div class="text-block">
+          <h4><a href="https://www.linkedin.com/in/swagnik-das-073b06211/">Swagnik Das,20051228</a></h4>
+        </div>
+      </div>
+  </div>
+  <div class="slider-box">
+      <div id="slider">
+        <img src="Adrija Mitra.jpeg">
+        <div class="text-block1">
+          <h4><a href="https://www.linkedin.com/in/adrija-mitra-2824101b7/">Adrija Mitra,20051235</a></h4>
+        </div>
+      </div>
+  </div>
+  <div class="slider-box">
+      <div id="slider">
+        <img src="st.jpeg">
+        <div class="text-block">
+          <h4><a href="https://www.linkedin.com/in/shivangi-tripathi-170327202/">Shivangi Tripathi,20051253</a></h4>
+        </div>
+      </div>
+  </div>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header><strong>Introduction</strong></header>
+    <p><strong>Inheritance</strong> in Java is a mechanism in which one object acquires all the properties and behaviors of a parent object. It is an important part of <strong>OOPs</strong> (Object Oriented programming system).</p>
+    <p>The idea behind inheritance in Java is that you can create new classes that are built upon existing classes. When you inherit from an existing class, you can reuse methods and fields of the parent class. Moreover, you can add new methods and fields in your current class also.</p>
+    <p>---------------------------------------------------------------------------------------------------------------X--------------------------------------------------------------------------------------------------------------</p>
+  </section>
+  <section class="main-section" id="Basics_of_Inheritance">
+    <header><strong>Basics of Inheritance</strong></header>
+    <p>Inheritance is one of the key features of OOP that allows us to create a new class from an existing class.The new class that is created is known as subclass (child or derived class) and the existing class from where the child class is derived is known as superclass (parent or base class).The extends keyword is used to perform inheritance in Java.</p>
+    <p><br><strong>For example:</strong></p>
+    <pre>
+    <code>
+      <br>class Animal {
+      <br>// methods and fields
+      <br>}
+      <br>// use of extends keyword// to perform inheritanceclass Dog extends Animal {
+      <br>// methods and fields of Animal
+      <br>// methods and fields of Dog
+      <br>}
+      <br>
+      <button><a href="https://www.onlinegdb.com/online_java_compiler">Try Yourself</a></button>
+    </code>
+    </pre>
+    <p>In the above example, the Dog class is created by inheriting the methods and fields from the Animal class.Here, Dog is the subclass and Animal is the superclass.</p>
+    <p><strong>Example 1: Java Inheritance</strong></p>
+    <pre>
+    <code>
+      <br>class Animal {
+      <br>// field and method of the parent class
+      <br>String name;
+      <br>public void eat() {
+      <br>System.out.println("I can eat");
+      <br>}
+      <br>}
+      <br>// inherit from Animalclass Dog extends Animal {
+      <br>// new method in subclass
+      <br>public void display() {
+      <br>System.out.println("My name is " + name);
+      <br>}
+      <br>}
+      <br>class Main {
+      <br>public static void main(String[] args) {
+      <br>// create an object of the subclass
+      <br>Dog labrador = new Dog();
+      <br>// access field of superclass
+      <br>labrador.name = "Rohu";
+      <br>labrador.display();
+      <br>// call method of superclass
+      <br>// using object of subclass
+      <br>labrador.eat();
+      <br>}
+      <br>}
+      <br>
+      <button><a href="https://www.onlinegdb.com/online_java_compiler">Try Yourself</a></button>
+    </code>
+    </pre>
+    <p><strong>Output</strong>
+      <br>My name is Rohu
+      <br>I can eat
+    </p>
+    <p>In the above example, we have derived a subclass Dog fromsuperclass Animal. Notice the statements,</p>
+    <pre>
+    <code>
+      <br>labrador.name = "Rohu";
+      <br>labrador.eat();
+      <br>
+      <button><a href="https://www.onlinegdb.com/online_java_compiler">Try Yourself</a></button>
+    </code>
+    </pre>
+    <p>Here, labrador is an object of Dog. However, name and eat() are the members of the Animal class.Since Dog inherits the field and method from Animal, we are able to access the field and method using the object of the Dog.</p>
+    <img src="1.webp">
+    <p><strong>is-a relationship</strong></p>
+    <p>In Java, inheritance is an is-a relationship. That is, we use inheritance only if there exists an is-a relationship between two classes. For example,</p>
+    <ul>
+      <li type="'circle"><strong>Car</strong> is a <strong>Vehicle</strong></li>
+      <li type="'circle"><strong>Orange</strong> is a <strong>Fruit</strong></li>
+      <li type="'circle"><strong>Surgeon</strong> is a <strong>Doctor</strong></li>
+      <li type="'circle"><strong>Dog</strong> is an <strong>Animal</strong></li>
+    </ul>
+    <p>Here, Car can inherit from Vehicle, Orange can inherit from Fruit, and so on.</p>
+    <p>---------------------------------------------------------------------------------------------------------------X--------------------------------------------------------------------------------------------------------------</p>
+  </section>
+  <section class="main-section" id="Types_of_Inheritance">
+    <header><strong>Types of Inheritance</strong></header>
+    <p>On the basis of class, there can be three types of inheritance in java: single, multilevel and hierarchical.</p>
+    <p>In java programming, multiple and hybrid inheritance is supported through interface only.We will learn about interfaces later.</p>
+    <img src="2.jpeg" class="center1">
+    <p>When one class inherits multiple classes, it is known as multiple inheritance.</p>
+    <img src="3.jpeg" class="center1">
+    <p><strong>Single Inheritance Example</strong></p>
+    <p>When a class inherits another class, it is known as a single inheritance. In the example given below, Dog class inherits the Animal class, so there is the single inheritance.</p>
+    <pre>
+    <code>
+      <br>class Animal{
+      <br>void eat(){System.out.println("eating...");}
+      <br>}
+      <br>class Dog extends Animal{
+      <br>void bark(){System.out.println("barking...");}
+      <br>}
+      <br>class TestInheritance{
+      <br>public static void main(String args[]){
+      <br>Dog d=new Dog();
+      <br>d.bark();
+      <br>d.eat();
+      <br>}}
+      <br>
+      <button><a href="https://www.onlinegdb.com/online_java_compiler">Try Yourself</a></button>
+    </code>
+    </pre>
+    <p><strong>Output:</strong></p>
+    <p>barking...</p>
+    <p>eating...</p>
+    <p><strong>Multilevel Inheritance Example</strong></p>
+    <p>When there is a chain of inheritance, it is known as multilevel inheritance. As you can see in the example given below, BabyDog class inherits the Dog class which again inherits the Animal class,so there is a multilevel inheritance.</p>
+    <pre>
+      <code>
+        <br>class Animal{
+        <br>void eat(){System.out.println("eating...");}
+        <br>}
+        <br>class Dog extends Animal{
+        <br>void bark(){System.out.println("barking...");}
+        <br>}
+        <br>class BabyDog extends Dog{
+        <br>void weep(){System.out.println("weeping...");}
+        <br>}
+        <br>class TestInheritance2{
+        <br>public static void main(String args[]){
+        <br>BabyDog d=new BabyDog();
+        <br>d.weep();
+        <br>d.bark();
+        <br>d.eat();
+        <br>}}
+        <br>
+        <button><a href="https://www.onlinegdb.com/online_java_compiler">Try Yourself</a></button>
+      </code>
+    </pre>
+    <p><strong>Output</strong></p>
+    <p>weeping...</p>
+    <p>barking...</p>
+    <p>eating...</p>
+    <p><strong>Hierarchical Inheritance Example</strong></p>
+    <p>When two or more classes inherits a single class, it is known as hierarchical inheritance. In the example given below, Dog and Cat classes inherits the Animal class, so there is hierarchical inheritance.</p>
+    <pre>
+      <code>
+        <br>class Animal{
+        <br>void eat(){System.out.println("eating...");}
+        <br>}
+        <br>class Dog extends Animal{
+        <br>void bark(){System.out.println("barking...");}
+        <br>}
+        <br>class Cat extends Animal{
+        <br>void meow(){System.out.println("meowing...");}
+        <br>}
+        <br>class TestInheritance3{
+        <br>public static void main(String args[]){
+        <br>Cat c=new Cat();
+        <br>c.meow();
+        <br>c.eat();
+        <br>//c.bark();//C.T.Error
+        <br>}}
+        <br>
+        <button><a href="https://www.onlinegdb.com/online_java_compiler">Try Yourself</a></button>
+      </code>
+    </pre>
+    <p><strong>Output:</strong></p>
+    <p>meowing...</p>
+    <p>eating...</p>
+    <p>---------------------------------------------------------------------------------------------------------------X--------------------------------------------------------------------------------------------------------------</p>
+  </section>
+  <section class="main-section" id="Method_OverRiding">
+    <header><strong>Method OverRiding</strong></header>
+    <p>Method overriding is a way by which java achieves runtime polymorphism. It can be done only in inheritance.
+      In a class hierarchy, when a method in subclass has the same name and type signature as a method in superclass, then the method in subclass is said to 'override' the superclass method. when an overridden method is called from within the subclass, it will always refer to the version of that method defined in subclass, and version defined by superclass is hidden.</p>
+    <p><strong>Following is an example of overriding:</strong></p>
+    <pre>
+    <code>
+      <br>//Method overriding
+      <br>class Figure{
+      <br>double dim1, dim2;
+      <br>//constructor
+      <br>Figure(double a, double b){
+      <br>dim1=a; dim2=b;
+      <br>}
+      <br>double area(){
+      <br>return 0.0;
+      <br>}
+      <br>void showFigure(){
+      <br>System.out.println("Area for Figure is undefined");
+      <br>}
+      <br>}
+      <br>class Rectangle extends Figure{
+      <br>//constructor
+      <br>Rectangle(double a, double b){
+      <br>super(a,b);
+      <br>}
+      <br>double area(){
+      <br>return (dim1*dim2);
+      <br>}
+      <br>void showRectangle(){
+      <br>System.out.print("Area for Rectangle is:");
+      <br>}
+      <br>}
+      <br>class compute{
+      <br>public static void main(String ...args){
+      <br>Rectangle rect=new Rectangle(10.0,15.0);
+      <br>rect.showRectangle();
+      <br>System.out.println(rect.area());// this calls area() of rectangle
+      <br>}
+      <br>}
+      <br>
+      <button><a href="https://www.onlinegdb.com/online_java_compiler">Try Yourself</a></button>
+      </code>
+      </pre>
+      <p><strong>Output will be as follows:</strong>
+        <br>Area for Rectangle is: 150.0
+      </p>
+      <img src="4.jpeg" class="center1">
+      <p>This piece of code will call only the area() in class B and print the value. area() in class class A will be overridden during runtime. The showFigure() is inherited by class B. If we want to call area() of class A, then we can access it through super clause.</p>
+      <pre>
+      <code>
+          <br>class Rectangle extends Figure{
+          <br>Rectangle(double a, double b){
+          <br>super(a,b);
+          <br>}
+          <br>double area(){
+          <br>return (dim1*dim2);
+          <br>}
+          <br>void showRectangle(){
+          <br>showFigure();
+          <br>System.out.println(super.area());// this calls area() of class Figure
+          <br>System.out.print("Area for Rectangle is:");
+          <br>}
+          <br>}
+          <br>
+          <button><a href="https://www.onlinegdb.com/online_java_compiler">Try Yourself</a></button>
+      </code>
+      </pre>
+      <p><strong>Following will be the output:</strong>
+        <br>Area for Figure is undefined.
+        <br>0.0
+        <br>Area for Rectangle is: 150.0
+      </p>
+      <p>Method overriding occurs only when the names and type signatures of the two methods are identical. Else the two methods will be overloaded.</p>
+      <p><strong>For example, consider this code:</strong></p>
+      <pre>
+      <code>
+        <br>//Methods with differing types signature are overloaded, not overridden
+        <br>class A{
+        <br>int i,j;
+        <br>A(int a, int b){
+        <br>i=a; j=b;
+        <br>}
+        <br>void show(){
+        <br>System.out.println("i= "+i+" and j= "+j);
+        <br>}
+        <br>}
+        <br>class B extends A{
+        <br>int k;
+        <br>B(int a, int b, int c){
+        <br>super(a,b);
+        <br>k=c;
+        <br>}
+        <br>void show(String msg){
+        <br>System.out.println(msg+k);
+        <br>}
+        <br>}
+        <br>class Main{
+        <br>public static void main(String ...args){
+        <br>B objofB=new B(1,2,3);
+        <br>objofB.show();// calls show() in A
+        <br>objofB.show("and k= ");// calls show(String) in B
+        <br>}
+        <br>}
+        <br>
+        <button><a href="https://www.onlinegdb.com/online_java_compiler">Try Yourself</a></button>
+      </code>
+      </pre>
+      <p><strong>Following will be the output:</strong></p>
+      <p>i= 1 and j= 2
+        <br>and k= 3</p>
+      <p>The version of show() in B takes a string parameter which makes its signature different from the show() in class A which takes no parameters. So no overridding takes place.</p>
+      <img src="5.jpeg" class="center1">
+      <p>---------------------------------------------------------------------------------------------------------------X--------------------------------------------------------------------------------------------------------------</p>
+    </section>
+  <section class="main-section" id="Dynamic_Method_Dispatch">
+    <header><strong>Dynamic Method Dispatch</strong></header>
+    <p>
+      <ul>
+        <li type="disc">Dynamic method dispatch is also known as run time polymorphism.</li>
+        <li type="disc">It is the process through which a call to an overridden method is resolved at runtime.</li>
+        <li type="disc">This technique is used to resolve a call to an overridden method at runtime rather than compile time.</li>
+      </ul>
+    </p>
+    <p>Method overriding allows for dynamic method invocation: 
+      <ul>
+        <li type="disc">an overridden method is called through the super-class variable</li>
+        <li type="disc">Java determines which version of that method to execute based on the type of the referred object at the time the call occurs</li>
+        <li type="disc">when different types of objects are referred, different versions of the overridden method will be called</li>
+      </ul>
+    </p>
+
+    <p><strong>Illustration of Dynamic Method Dispatch:</strong></p>
+    <pre>
+    <code>
+      <br>class A
+      <br>{
+      <br>int i;
+      <br>void display()
+      <br>{
+      <br>System.out.println("In class A");
+      <br>}
+      <br>}
+      <br>class B extends A // Inheriting class A
+      <br>{
+      <br>void display()
+      <br>{
+      <br>System.out.println("In class B");
+      <br>}
+      <br>}
+      <br>class C extends B // Inheriting class B
+      <br>{
+      <br>void display()
+      <br>{
+      <br>System.out.println("In class C");
+      <br>}
+      <br>}
+      <br>class compute // Class with main method
+      <br>{
+      <br>public static void main(String args[])
+      <br>{
+      <br>A a1; // Reference object of class A
+      <br>B b1 = new B(); // Actual object of class B
+      <br>a1 = b1; // Reference a1 assigned to b1
+      <br>a1.display(); 
+      <br>C c1 = new C(); // Actual object of class C
+      <br>a1 = c1; // Reference a1 assigned to c1
+      <br>a1.display();
+      <br>A a11 = new A(); // Actual object of class A
+      <br>a1 = a11; // Reference a1 assigned to c1
+      <br>a1.display();
+      <br>}
+      <br>}
+      <br>
+      <button><a href="https://www.onlinegdb.com/online_java_compiler">Try Yourself</a></button>
+      </code>
+      </pre>
+      <p><strong>Output</strong>
+        <br>In class B
+        <br>In class C
+        <br>In class A
+      </p>
+      <img src="6.webp" class="center1">
+      <p>This program creates one superclass (i.e., class A) and two subclasses of it (i.e., class B and class C). Subclasses B and C override the display() method declared in A. Inside the main() method in class compute, objects of classes A, B and C are declared. A reference variable of A, called a1, is declared.</p>
+      <p>The program then assigns a reference to each type of object to a1 and uses the reference to invoke display().</p>
+      <p>The version of display() executed is determined by the type of the object being referred to at the time of the call.</p>
+      <p><strong>Example of a program using Dynamic Method Dispatch:</strong></p>
+      <p>Program in java to define a class Shape which has data member “area” and a member function showArea() with derived classes - Circle and Rectangle, and display the area of Circle and Rectangle.</p>
+      <p>
+        <pre>
+        <code>
+          <br>class Shape 
+          <br>{
+          <br>int r1, r2;
+          <br>Shape(int i, int j) 
+          <br>{
+          <br>r1 = i;
+          <br>r2 = j;
+          <br>}
+          <br>double ShowArea() 
+          <br>{
+          <br>System.out.println("\nArea Undefined");
+          <br>return 0;
+          <br>}
+          <br>}
+          <br>class Rectangle extends Shape // Inheriting class Shape
+          <br>{
+          <br>Rectangle() 
+          <br>{
+          <br>super(3, 4);
+          <br>}
+          <br>double ShowArea() 
+          <br>{
+          <br>System.out.print("\nArea = ");
+          <br>return r1 * r2;
+          <br>}
+          <br>}
+          <br>class Circle extends Shape // Inheriting class Shape 
+          <br>{
+          <br>Circle() 
+          <br>{
+          <br>super(5, 10);
+          <br>}
+          <br>double ShowArea() 
+          <br>{
+          <br>System.out.print("\nArea = ");
+          <br>return 3.14 * r1 * r2;
+          <br>}
+          <br>}
+          <br>class p2 // Class with main method
+          <br>{
+          <br>public static void main(String arg[]) 
+          <br>{
+          <br>Shape s; // Reference object of class Shape
+          <br>Rectangle r = new Rectangle(); // Actual object of class Rectangle
+          <br>s = r; // Reference s assigned to r
+          <br>System.out.print(s.ShowArea()); 
+          <br>Circle c = new Circle(); // Actual object of class Circle
+          <br>s = c; // Reference s assigned to c
+          <br>System.out.print(s.ShowArea());
+          <br>Shape s1 = new Shape(0, 0); // // Actual object of class Shape
+          <br>s = s1; // Reference s assigned to s1
+          <br>s.ShowArea();
+          <br>}
+          <br>}
+          <br>
+          <button><a href="https://www.onlinegdb.com/online_java_compiler">Try Yourself</a></button>
+        </code>
+        </pre>
+      </p>
+      </p>
+      <p><strong>Output</strong>
+      <br>Area = 12.0
+      <br>Area = 157.0
+      <br>Area Undefined
+    </p>
+  </section>
+</main>
+</body>
+</html>
