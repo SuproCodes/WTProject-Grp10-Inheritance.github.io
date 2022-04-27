@@ -3,62 +3,44 @@
 <nav id="navbar">
   <h1>Group-10 WT Project : Inheritance</h1>
   <link rel="stylesheet" href="style.css">
-  <a href="#Introduction" class="nav-link">Introduction</a>
   <a href="#Basics_of_Inheritance" class="nav-link">Basics of Inheritance</a>
   <a href="#Types_of_Inheritance" class="nav-link">Types of Inheritance</a>
   <a href="#Method_OverRiding" class="nav-link">Method OverRiding</a>
   <a href="#Dynamic_Method_Dispatch" class="nav-link">Dynamic Method Dispatch</a>
 </nav>
 </head>
+
+<style type="text/css">
+
+#slider {
+  overflow: hidden;
+}
+
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+}
+
+#slider figure img {
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+</style>
 <body>
   <h2>Group 10 Members</h2>
-  <div class="slider-box">
-    <div id="slider">
-      <img src="Jyotiraditya Saha (2).jpg">
-      <div class="text-block">
-        <h4><a href="https://www.linkedin.com/in/jyotiradityasaha/">Jyotiraditya Saha,20051209</a></h4>
-      </div>
-    </div>
-  </div>
-  <div class="slider-box">
-      <div id="slider">
-        <img src="SupratikDutta1.jpeg">
-        <div class="text-block1">
-          <h4><a href="https://www.linkedin.com/in/supratik-dutta-2362811b7/">Supratik Dutta,20051227</a></h4>
-        </div>
-      </div>
-  </div>
-  <div class="slider-box">
-      <div id="slider">
-        <img src="swagnik4.jpeg">
-        <div class="text-block">
-          <h4><a href="https://www.linkedin.com/in/swagnik-das-073b06211/">Swagnik Das,20051228</a></h4>
-        </div>
-      </div>
-  </div>
-  <div class="slider-box">
-      <div id="slider">
-        <img src="Adrija Mitra.jpeg">
-        <div class="text-block1">
-          <h4><a href="https://www.linkedin.com/in/adrija-mitra-2824101b7/">Adrija Mitra,20051235</a></h4>
-        </div>
-      </div>
-  </div>
-  <div class="slider-box">
-      <div id="slider">
-        <img src="st.jpeg">
-        <div class="text-block">
-          <h4><a href="https://www.linkedin.com/in/shivangi-tripathi-170327202/">Shivangi Tripathi,20051253</a></h4>
-        </div>
-      </div>
-  </div>
+  <div id="slider">
+    <figure>
+      <img src="JS1.jpeg">
+      <img src="SDU1.jpeg">
+      <img src="SDA1.jpeg">
+      <img src="AM1.jpeg">
+      <img src="ST1.jpeg">
+    </figure>
+  </div> 
 <main id="main-doc">
-  <section class="main-section" id="Introduction">
-    <header><strong>Introduction</strong></header>
-    <p><strong>Inheritance</strong> in Java is a mechanism in which one object acquires all the properties and behaviors of a parent object. It is an important part of <strong>OOPs</strong> (Object Oriented programming system).</p>
-    <p>The idea behind inheritance in Java is that you can create new classes that are built upon existing classes. When you inherit from an existing class, you can reuse methods and fields of the parent class. Moreover, you can add new methods and fields in your current class also.</p>
-    <p>---------------------------------------------------------------------------------------------------------------X--------------------------------------------------------------------------------------------------------------</p>
-  </section>
   <section class="main-section" id="Basics_of_Inheritance">
     <header><strong>Basics of Inheritance</strong></header>
     <p>Inheritance is one of the key features of OOP that allows us to create a new class from an existing class.The new class that is created is known as subclass (child or derived class) and the existing class from where the child class is derived is known as superclass (parent or base class).The extends keyword is used to perform inheritance in Java.</p>
@@ -132,8 +114,7 @@
       <li type="'circle"><strong>Surgeon</strong> is a <strong>Doctor</strong></li>
       <li type="'circle"><strong>Dog</strong> is an <strong>Animal</strong></li>
     </ul>
-    <p>Here, Car can inherit from Vehicle, Orange can inherit from Fruit, and so on.</p>
-    <p>---------------------------------------------------------------------------------------------------------------X--------------------------------------------------------------------------------------------------------------</p>
+    <p>Here, Car can inherit from Vehicle, Orange can inherit from Fruit, and so on.
   </section>
   <section class="main-section" id="Types_of_Inheritance">
     <header><strong>Types of Inheritance</strong></header>
@@ -220,7 +201,6 @@
     <p><strong>Output:</strong></p>
     <p>meowing...</p>
     <p>eating...</p>
-    <p>---------------------------------------------------------------------------------------------------------------X--------------------------------------------------------------------------------------------------------------</p>
   </section>
   <section class="main-section" id="Method_OverRiding">
     <header><strong>Method OverRiding</strong></header>
@@ -335,7 +315,6 @@
         <br>and k= 3</p>
       <p>The version of show() in B takes a string parameter which makes its signature different from the show() in class A which takes no parameters. So no overridding takes place.</p>
       <img src="5.jpeg" class="center1">
-      <p>---------------------------------------------------------------------------------------------------------------X--------------------------------------------------------------------------------------------------------------</p>
     </section>
   <section class="main-section" id="Dynamic_Method_Dispatch">
     <header><strong>Dynamic Method Dispatch</strong></header>

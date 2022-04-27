@@ -8,7 +8,7 @@ html,body {
 nav {
   background-image: linear-gradient(to right, rgba(163, 74, 22, 0.756), rgba(243, 234, 232, 0.505));
   border-bottom: 2px solid red;
-  height: 60vh;
+  height: 50vh;
   min-width: 300px;
 }
 
