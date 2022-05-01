@@ -3,6 +3,7 @@ html,body {
   background-image: linear-gradient(to right, rgba(26, 91, 231, 0.938), rgb(235, 241, 235));
   font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1.5;
+  color: #090975;
 }
 
 nav {
