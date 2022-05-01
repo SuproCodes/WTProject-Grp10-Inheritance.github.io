@@ -1,13 +1,13 @@
 html,body {
   min-width: 290px;
-  background-image: linear-gradient(to right, rgba(185, 53, 53, 0.765), rgb(80, 84, 80));
+  background-image: linear-gradient(to right, rgba(26, 91, 231, 0.938), rgb(235, 241, 235));
   font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1.5;
 }
 
 nav {
-  background-image: linear-gradient(to right, rgba(163, 74, 22, 0.756), rgba(243, 234, 232, 0.505));
-  border-bottom: 2px solid red;
+  background-image: linear-gradient(to right, rgba(22, 209, 237, 0.756), rgba(243, 234, 232, 0.943));
+  border-bottom: 2px solid rgb(4, 0, 255);
   height: 50vh;
   min-width: 300px;
 }
@@ -16,7 +16,7 @@ h2 {
   text-align: center;
 }
 nav a {
-  border-top: 1px solid red;
+  border-top: 1px solid rgb(25, 0, 255);
   color: black;
   display: block;
   padding: 15px;
@@ -30,7 +30,7 @@ nav header {
 }
 
 main {
-  background-color: linear-gradient(to right, rgba(223, 12, 12, 0.42), rgb(27, 29, 27));
+  background-color: linear-gradient(to right, rgba(79, 10, 152, 0.42), rgb(184, 44, 186));
   flex: 1;
   height: 100vh;
   overflow-y: scroll;
@@ -46,12 +46,65 @@ header {
   font-weight: thin;
   padding: 5px;
 }
+.neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+h1 {
+  font-size: 4.2rem;    
+}
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px rgb(18, 127, 244),
+      0 0 80px rgb(14, 61, 216),
+      0 0 90px rgb(19, 50, 205),
+      0 0 100px rgb(8, 18, 154),
+      0 0 150px rgb(37, 5, 120);
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+  
+h2 {
+ font-size: 1.8rem;
+}
+.container {
+  margin-top: 20vh;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #1b3ac4;
+}  
+
 h1 {
   text-align: center;
   font-size: 2.1rem;
   line-height: 1.4;
   letter-spacing: 0.8rem;
   padding: 5px;
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(0, 153, 255),
+    0 0 82px rgb(0, 200, 255),
+    0 0 92px rgb(0, 179, 255),
+    0 0 102px rgb(0, 149, 255),
+    0 0 151px rgb(0, 98, 255);
+    animation: flicker 1.5s infinite;
 }
 
 code {
@@ -69,7 +122,7 @@ code {
 }
 pre{
   padding-top: 10px;
-  background-color: rgba(49, 11, 4, 0.861);
+  background-color: rgba(88, 10, 130, 0.861);
 }
 
 @media only screen and (max-width: 815px) {
@@ -110,7 +163,7 @@ pre{
   }
   nav {
     border-right: none;
-    border-bottom: 2px solid rgb(128, 28, 0);
+    border-bottom: 2px solid rgb(15, 0, 128);
     height: 200px;
     overflow-y: scroll;
     width: 100%;
@@ -180,7 +233,7 @@ a:visited {
 }
 a:hover {
   color: #ffffff;
-  background-color: rgb(146, 41, 39);
+  background-color: rgb(11, 7, 83);
   text-decoration: none;
   cursor: pointer;
   text-align: center; 
@@ -194,10 +247,10 @@ a:hover {
 }
 
 button {
-  background-color: red;
-  border: 2px solid maroon;
+  background-color: rgb(0, 81, 255);
+  border: 2px solid rgb(9, 204, 211);
 }
 
 button:hover {
-  background-color: rgb(146, 41, 39);
+  background-color: rgb(20, 6, 96);
 }
